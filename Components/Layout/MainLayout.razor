@@ -1,0 +1,200 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main class="main-content">
+        <div class="top-bar">
+            <button class="menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="search-bar">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Buscar en el sistema..." class="search-input">
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-info">
+                    <i class="bi bi-person-circle user-icon"></i>
+                    <span class="username">Admin</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            @Body
+        </div>
+    </main>
+</div>
+
+<style>
+    * {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .page {
+        display: flex;
+        min-height: 100vh;
+        background-color: #f5f6fa;
+    }
+
+    .sidebar {
+        width: 280px;
+        background: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .top-bar {
+        height: 70px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #5a6169;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background: #f0f2f5;
+        border-radius: 12px;
+        padding: 0.5rem 1rem;
+        margin-right: auto;
+        width: 350px;
+        transition: all 0.3s ease;
+    }
+
+    .search-bar:focus-within {
+        box-shadow: 0 0 0 2px rgba(73, 144, 226, 0.3);
+    }
+
+    .search-bar i {
+        color: #9da3af;
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .search-input {
+        border: none;
+        background: none;
+        outline: none;
+        width: 100%;
+        color: #5a6169;
+        font-size: 0.95rem;
+    }
+
+    .user-menu {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .notifications {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .notifications i {
+        font-size: 1.3rem;
+        color: #5a6169;
+        transition: color 0.3s ease;
+    }
+
+    .notifications:hover i {
+        color: #4A90E2;
+    }
+
+    .badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #dc3545;
+        color: white;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        cursor: pointer;
+        padding: 0.5rem 0.75rem;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .user-info:hover {
+        background: #f0f2f5;
+    }
+
+    .user-icon {
+        font-size: 2rem;
+        color: #4A90E2;
+    }
+
+    .username {
+        font-weight: 500;
+        color: #2d3748;
+        font-size: 0.95rem;
+    }
+
+    .content {
+        padding: 2rem;
+        flex: 1;
+    }
+
+    @@media (max-width: 768px) {
+        .sidebar {
+            position: fixed;
+            left: -280px;
+            height: 100vh;
+        }
+
+        .sidebar.show {
+            left: 0;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .search-bar {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\favicon.jpg",
+      "PackagePath": "staticwebassets\\favicon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\images\\avatar-placeholder.png",
+      "PackagePath": "staticwebassets\\images\\avatar-placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Documents\\university\\Semestre 9\\Ing soft III\\Proyecto Final\\IncapacidadesWeb\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IncapacidadesWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.IncapacidadesWeb.props",
+      "PackagePath": "build\\IncapacidadesWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IncapacidadesWeb.props",
+      "PackagePath": "buildMultiTargeting\\IncapacidadesWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.IncapacidadesWeb.props",
+      "PackagePath": "buildTransitive\\IncapacidadesWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

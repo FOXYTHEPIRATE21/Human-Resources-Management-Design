@@ -1,0 +1,178 @@
+@page "/nuevo-tramite"
+
+<div class="nuevo-tramite-container">
+    <div class="form-header">
+        <h1>Nuevo Trámite</h1>
+        <a href="/" class="btn-cancelar">
+            <i class="bi bi-x-lg"></i>
+            Cancelar
+        </a>
+    </div>
+
+    <div class="formulario-tramite">
+        <div class="form-group">
+            <label>Incapacidad Relacionada</label>
+            <select class="form-control">
+                <option value="">Seleccione una incapacidad</option>
+                <!-- This would typically be populated dynamically from your backend -->
+                <option value="incapacidad1">Incapacidad - Juan Pérez (01/05/2024)</option>
+                <option value="incapacidad2">Incapacidad - María González (15/04/2024)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Monto a Pagar</label>
+            <input type="number" class="form-control" placeholder="Ingrese el monto" min="0" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label>Fecha de Pago</label>
+            <input type="date" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Método de Pago</label>
+            <select class="form-control">
+                <option value="">Seleccione un método de pago</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="cheque">Cheque</option>
+                <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Portal Médico</label>
+            <select class="form-control">
+                <option value="">Seleccione un portal médico</option>
+                <option value="compensar">Compensar EPS</option>
+                <option value="sura">EPS SURA</option>
+                <option value="nuevaeps">Nueva EPS</option>
+                <option value="sanitas">Sanitas EPS</option>
+                <option value="comfenalco">Comfenalco</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-guardar">
+                <i class="bi bi-save"></i>
+                Guardar Trámite
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .nuevo-tramite-container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0;
+    }
+
+    .btn-cancelar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .btn-cancelar:hover {
+        color: #0066ff;
+    }
+
+    .btn-cancelar i {
+        font-size: 1rem;
+    }
+
+    .formulario-tramite {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        font-weight: 500;
+        color: #1a1a1a;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #0066ff;
+        box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
+    }
+
+    .form-actions {
+        margin-top: 1rem;
+    }
+
+    .btn-guardar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        background: #0066ff;
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-guardar:hover {
+        background: #0052cc;
+        transform: translateY(-1px);
+    }
+
+    .btn-guardar i {
+        font-size: 1rem;
+    }
+
+    /* Estilos para placeholders */
+    .form-control::placeholder {
+        color: #999;
+    }
+
+    /* Estilos para selects */
+    .form-control option {
+        color: #1a1a1a;
+    }
+</style>

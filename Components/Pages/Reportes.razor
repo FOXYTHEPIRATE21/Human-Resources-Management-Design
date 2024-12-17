@@ -1,0 +1,180 @@
+@page "/reportes"
+
+<div class="reportes-container">
+    <div class="page-header">
+        <h1>Reportes</h1>
+        <p>Análisis y generación de informes detallados</p>
+    </div>
+
+    <div class="reportes-grid">
+        <div class="reporte-card">
+            <div class="reporte-header">
+                <h3>Incapacidades por Mes</h3>
+                <a href="http://localhost:5028/api/Usuarios/generatepdf" class="btn-generar">
+                    <i class="bi bi-file-earmark-pdf"></i> Generar PDF
+                </a>
+            </div>
+            <!-- Aquí iría un gráfico o estadística -->
+            <div class="reporte-placeholder">
+                <i class="bi bi-graph-up"></i>
+                <p>Gráfico de Incapacidades</p>
+            </div>
+        </div>
+        <div class="reporte-card">
+            <div class="reporte-header">
+                <h3>Tiempo Promedio de Incapacidad</h3>
+                <a href="http://localhost:5028/api/Usuarios/generateexcel" class="btn-generar">
+                    <i class="bi bi-file-earmark-excel"></i> Exportar Excel
+                </a>
+            </div>
+            <div class="reporte-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Promedio General</span>
+                    <span class="stat-value">15 días</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Departamento RR.HH</span>
+                    <span class="stat-value">12 días</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filtros-reportes">
+        <h2>Filtros de Reporte</h2>
+        <div class="filtro-row">
+            <div class="filtro-grupo">
+                <label>Fecha Inicio</label>
+                <input type="date" />
+            </div>
+            <div class="filtro-grupo">
+                <label>Fecha Fin</label>
+                <input type="date" />
+            </div>
+            <div class="filtro-grupo">
+                <label>Departamento</label>
+                <select>
+                    <option>Todos</option>
+                    <option>Recursos Humanos</option>
+                    <option>Tecnología</option>
+                </select>
+            </div>
+            <button class="btn-aplicar-filtros">
+                <i class="bi bi-funnel"></i> Aplicar Filtros
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .reportes-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .reportes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+
+    .reporte-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+    }
+
+    .reporte-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .reporte-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        color: #718096;
+    }
+
+    .reporte-placeholder i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-generar {
+        background: none;
+        border: 1px solid #e2e8f0;
+        color: #4a5568;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .reporte-stats {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 48%;
+    }
+
+    .filtros-reportes {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+    }
+
+    .filtro-row {
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    .filtro-grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filtro-grupo input,
+    .filtro-grupo select {
+        padding: 0.5rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+
+    .btn-aplicar-filtros {
+        background: #3182ce;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+</style>

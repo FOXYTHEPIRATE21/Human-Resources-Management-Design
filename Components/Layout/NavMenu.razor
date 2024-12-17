@@ -1,0 +1,141 @@
+﻿<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<div class="nav-wrapper">
+    <div class="brand">
+        <img src="/images/logo.jpg" alt="Logo" class="logo">
+        <h1 class="brand-title">Incapacidades</h1>
+    </div>
+
+    <div class="nav-section">
+        <small class="nav-section-title">MENU</small>
+        <nav>
+            <NavLink class="nav-item" href="" Match="NavLinkMatch.All">
+                <i class="bi bi-house-door"></i>
+                <span>Dashboard</span>
+            </NavLink>
+
+            <NavLink class="nav-item" href="incapacidades">
+                <i class="bi bi-file-medical"></i>
+                <span>Incapacidades</span>
+            </NavLink>
+
+            <NavLink class="nav-item" href="tramites">
+                <i class="bi bi-clipboard-data"></i>
+                <span>Trámites</span>
+            </NavLink>
+
+            <NavLink class="nav-item" href="reportes">
+                <i class="bi bi-graph-up"></i>
+                <span>Reportes</span>
+            </NavLink>
+        </nav>
+    </div>
+
+    <div class="nav-section">
+        <small class="nav-section-title">CONFIGURACIÓN</small>
+        <nav>
+            <NavLink class="nav-item" href="configuracion">
+                <i class="bi bi-gear"></i>
+                <span>Ajustes</span>
+            </NavLink>
+
+            <NavLink class="nav-item" href="perfil">
+                <i class="bi bi-person"></i>
+                <span>Perfil</span>
+            </NavLink>
+
+            <a href="javascript:void(0)" class="nav-item">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Cerrar Sesión</span>
+            </a>
+        </nav>
+    </div>
+</div>
+
+<style>
+    .nav-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .brand-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2d3748;
+        margin: 0;
+    }
+
+    .nav-section {
+        margin-bottom: 2rem;
+    }
+
+    .nav-section-title {
+        display: block;
+        color: #a0aec0;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        color: #4a5568;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 0.25rem;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .nav-item:hover {
+        background: #f7fafc;
+        color: #2d3748;
+    }
+
+    .nav-item.active {
+        background: #ebf4ff;
+        color: #3182ce;
+    }
+
+    .nav-item i {
+        font-size: 1.25rem;
+        margin-right: 1rem;
+    }
+
+    .nav-item span {
+        flex: 1;
+    }
+
+    .nav-item .badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        background: #3182ce;
+        color: white;
+        border-radius: 9999px;
+    }
+</style>

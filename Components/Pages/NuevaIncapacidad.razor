@@ -1,0 +1,180 @@
+@page "/nueva-incapacidad"
+
+<div class="nueva-incapacidad-container">
+    <div class="form-header">
+        <h1>Nueva Incapacidad</h1>
+        <a href="/" class="btn-cancelar">
+            <i class="bi bi-x-lg"></i>
+            Cancelar
+        </a>
+    </div>
+
+    <div class="formulario-incapacidad">
+        <div class="form-group">
+            <label>Nombre del Empleado</label>
+            <input type="text" class="form-control" placeholder="Ingrese nombre completo" />
+        </div>
+
+        <div class="form-group">
+            <label>Estado de Incapacidad</label>
+            <select class="form-control">
+                <option value="">Seleccione un estado</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="activo">Activo</option>
+                <option value="completado">Completado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de Incapacidad</label>
+            <select class="form-control">
+                <option value="">Seleccione un tipo</option>
+                <option value="reposo">Reposo Médico</option>
+                <option value="accidente">Accidente Laboral</option>
+                <option value="postoperatorio">Post Operatorio</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Fecha de Inicio</label>
+                <input type="date" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Fecha de Fin</label>
+                <input type="date" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-guardar">
+                <i class="bi bi-save"></i>
+                Guardar Incapacidad
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .nueva-incapacidad-container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0;
+    }
+
+    .btn-cancelar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .btn-cancelar:hover {
+        color: #0066ff;
+    }
+
+    .btn-cancelar i {
+        font-size: 1rem;
+    }
+
+    .formulario-incapacidad {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        font-weight: 500;
+        color: #1a1a1a;
+    }
+
+    .form-control {
+        width: auto;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #0066ff;
+        box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem; /* Este gap añade espacio entre los inputs de fecha */
+    }
+    
+    .form-actions {
+        margin-top: 1rem;
+    }
+
+    .btn-guardar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        background: #0066ff;
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-guardar:hover {
+        background: #0052cc;
+        transform: translateY(-1px);
+    }
+
+    .btn-guardar i {
+        font-size: 1rem;
+    }
+
+    /* Estilos para placeholders */
+    .form-control::placeholder {
+        color: #999;
+    }
+
+    /* Estilos para selects */
+    .form-control option {
+        color: #1a1a1a;
+    }
+
+</style>
