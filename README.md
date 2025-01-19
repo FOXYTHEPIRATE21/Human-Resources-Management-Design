@@ -54,7 +54,7 @@ cd Human-Resources-Management-Design
 dotnet run
 ```
 
-4. Navigate to `http://localhost:5000` in your web browser to see the design in action.
+4. Navigate to `http://localhost:5028` in your web browser to see the design in action.
 
 ### Explore the Pages
 
