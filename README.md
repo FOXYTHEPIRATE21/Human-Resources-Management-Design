@@ -67,3 +67,5 @@ The design includes several mockups for different HRMS pages, including:
 ### Contributions
 
 This project is a **design prototype** shared for those interested in reviewing or drawing inspiration from a well-designed HRMS frontend. Feel free to fork the repository, explore the code, or improve it.
+
+And a little reminder, the project is in spanish so if you want the design just change the texts and stuff!
